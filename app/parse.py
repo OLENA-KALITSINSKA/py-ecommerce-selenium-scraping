@@ -115,6 +115,9 @@ def parse_page(
         pagination: bool = False
 ) -> None:
     driver.get(url)
+
+    accept_cookies(driver)
+
     if pagination:
         click_more_button(driver)
 
